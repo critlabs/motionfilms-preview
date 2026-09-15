@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Motion Films — Keep the Momentum</title>
+<meta name="description" content="Motion Films — Riyadh-based film production, backed by a 25-year GCC legacy." />
+<meta name="theme-color" content="#101017" />
+
+<meta property="og:title" content="Motion Films — Keep the Momentum" />
+<meta property="og:description" content="Riyadh-based film production. 25-year GCC legacy." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="assets/favicon.png" type="image/png" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- LOADER — Motion Films short intro (~2.5s) -->
+<div class="loader" id="loader" role="status" aria-live="polite">
+  <div class="loader__pane loader__pane--l"></div>
+  <div class="loader__pane loader__pane--r"></div>
+  <div class="loader__inner">
+    <div class="loader__mark"><img src="assets/logo-bbg.png" alt="Motion Films" /></div>
+    <div class="loader__bar"><b id="loaderBar"></b></div>
+    <div class="loader__read mono"><span>MOTION FILMS</span><i>·</i><span>RIYADH</span><i>·</i><span><b id="loaderPct">00</b>%</span></div>
+  </div>
+</div>
+
+
+<!-- EDITORIAL RAIL — replaces the film-HUD (no more REC dot / frame counter / timecode) -->
+<aside class="rail" id="rail" aria-hidden="true">
+  <div class="rail__brand"><i></i><span class="mono">MF · RIYADH</span></div>
+  <div class="rail__track"><b id="railBar"></b></div>
+  <div class="rail__index mono">
+    <span id="railIdx">01</span><i>/</i><span>06</span>
+    <b id="railLabel">HERO</b>
+  </div>
+  <div class="rail__quote mono" id="railQuote">Keep the momentum.</div>
+</aside>
+
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="Motion Films home">
+    <img src="assets/logo-bbg.png" alt="Motion Films" />
+  </a>
+  <nav class="nav mono">
+    <a href="#who">WHO</a>
+    <a href="#expertise">EXPERTISE</a>
+    <a href="#mission">MISSION</a>
+    <a href="#legacy">LEGACY</a>
+    <a href="#contact" class="nav__cta">CONTACT</a>
+  </nav>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu__inner">
+    <ul class="menu__list">
+      <li><a href="#top"><span class="mono">01</span><span class="menu__label">Home</span></a></li>
+      <li><a href="#who"><span class="mono">02</span><span class="menu__label">Who We Are</span></a></li>
+      <li><a href="#expertise"><span class="mono">03</span><span class="menu__label">Expertise</span></a></li>
+      <li><a href="#mission"><span class="mono">04</span><span class="menu__label">Mission</span></a></li>
+      <li><a href="#legacy"><span class="mono">05</span><span class="menu__label">Legacy</span></a></li>
+      <li><a href="#contact"><span class="mono">06</span><span class="menu__label">Contact</span></a></li>
+    </ul>
+    <div class="menu__foot mono">
+      <span>MOTION FILMS</span>
+      <span>info@motionfilms.me</span>
+      <span>RIYADH · KSA</span>
+    </div>
+  </div>
+</nav>
+
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero" data-rail="01" data-rail-label="HERO" data-rail-quote="Keep the momentum.">
+    <div class="hero__plate">
+      <video class="hero__video" autoplay muted loop playsinline>
+        <source src="assets/showreel.mp4" type="video/mp4">
+      </video>
+      <div class="hero__scrim"></div>
+    </div>
+
+    <div class="hero__inner">
+      <span class="eyebrow mono" data-reveal>MOTION FILMS · RIYADH · 25-YEAR LEGACY</span>
+      <h1 class="hero__title display" data-reveal-lines>
+        <span class="line"><span>Keep</span></span>
+        <span class="line"><span>the</span></span>
+        <span class="line"><span class="accent">momentum.</span></span>
+      </h1>
+      <p class="hero__sub" data-reveal>
+        A Riyadh-based film company, backed by a 25-year GCC legacy — crafting narratives that spark cultural dialogue.
+      </p>
+    </div>
+
+    <div class="hero__cue mono" id="heroCue">
+      <span>SCROLL</span>
+      <span class="hero__cue-line"></span>
+    </div>
+  </section>
+
+
+  <!-- ============ WHO WE ARE ============ -->
+  <section class="section who" id="who" data-rail="02" data-rail-label="WHO WE ARE" data-rail-quote="To engage cultural dialogue through cinema.">
+    <div class="slate mono" data-reveal><span>02</span><i>/</i><span>WHO WE ARE</span></div>
+
+    <div class="who__grid">
+      <div class="who__left">
+        <h2 class="section-title display" data-reveal-words>Founded on a single, guiding purpose.</h2>
+      </div>
+      <div class="who__right">
+        <p class="lede beige" data-reveal>
+          Motion Films was founded to engage cultural dialogue through cinema. Partnering with Action Films, LLC, our journey began by bringing together a collective of people with a true, genuine passion for the craft. Our team in Riyadh is backed by a 25-year legacy of regional production.
+        </p>
+        <p data-reveal>
+          Over the last two decades, our founding partners at Action Films have collaborated with government institutions, multinational corporations, and industry leaders across the GCC, earning a reputation for both technical and cinematic excellence.
+        </p>
+        <p data-reveal>
+          Now, under Saudi leadership, Motion Films draws on that deep well of experience to produce work that creates a lasting impact — crafting narratives that spark cultural dialogue and visualise the abstract, intangible parts of the Saudi and Arab experience.
+        </p>
+        <p data-reveal>
+          While delivering premium content to our clients is a core pillar of our business, our commitment to the art of cinema itself runs just as deep. Our award-winning Arabic short film, <em>Al Majhool</em>, reflects that passion — and that our commitment to storytelling extends into cinema itself.
+        </p>
+      </div>
+    </div>
+
+    <!-- Riyadh location -->
+    <div class="who__location" data-reveal>
+      <img src="assets/kingdom-tower.jpg" alt="Riyadh, Kingdom of Saudi Arabia" />
+      <span class="who__location__label mono">RIYADH · KINGDOM OF SAUDI ARABIA</span>
+    </div>
+
+    <!-- Al Majhool film showcase -->
+    <div class="who__film" data-reveal>
+      <div class="who__film-poster">
+        <img src="assets/almajhool-poster.png" alt="Al Majhool — The Disappearance of a Young Boy" />
+      </div>
+      <div class="who__film-meta">
+        <span class="mono beige who__film-label">AL MAJHOOL &mdash; THE DISAPPEARANCE OF A YOUNG BOY</span>
+        <p class="who__film-desc">Award-winning Arabic short film. Directed by Mohammed Al-Kindi. A Motion Films &amp; Screen Oman co-production.</p>
+        <div class="laurels">
+          <div class="laurel-frame"><img src="assets/laurel-zambia.jpg" alt="Zambia Short Film Festival 2025 — Nominee" /></div>
+          <div class="laurel-frame"><img src="assets/laurel-multicultural.jpg" alt="International Multicultural Film Festival 2025 — Official Selection" /></div>
+          <div class="laurel-frame"><img src="assets/laurel-asian.jpg" alt="Asian Independent Film Festival 2025 — Honorable Mention" /></div>
+          <div class="laurel-frame"><img src="assets/laurel-kolkata.jpg" alt="International Kolkata Short Film Festival 2026 — Official Selection" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ EXPERTISE ============ -->
+  <section class="section expertise" id="expertise" data-rail="03" data-rail-label="EXPERTISE" data-rail-quote="Six disciplines. One crew.">
+    <div class="slate mono" data-reveal><span>03</span><i>/</i><span>OUR EXPERTISE</span></div>
+
+    <h2 class="section-title display" data-reveal-words>From narrative fiction to infrastructure film.</h2>
+
+    <ol class="disc-list">
+      <li data-disc><span class="disc__n mono">01</span><span class="disc__name">Narrative Fiction</span><span class="disc__k mono beige">SCRIPT · SHOOT · POST</span></li>
+      <li data-disc><span class="disc__n mono">02</span><span class="disc__name">Corporate &amp; Brand Films</span><span class="disc__k mono beige">STRATEGY · CRAFT</span></li>
+      <li data-disc><span class="disc__n mono">03</span><span class="disc__name">Television Commercials</span><span class="disc__k mono beige">CONCEPT · DIRECTION</span></li>
+      <li data-disc><span class="disc__n mono">04</span><span class="disc__name">Documentary Films</span><span class="disc__k mono beige">RESEARCH · STORY</span></li>
+      <li data-disc><span class="disc__n mono">05</span><span class="disc__name">HSE, Industrial &amp; Infrastructure</span><span class="disc__k mono beige">FIELD · CINEMATIC</span></li>
+      <li data-disc><span class="disc__n mono">06</span><span class="disc__name">Production Services &amp; Facilitation</span><span class="disc__k mono beige">CREW · LOCATIONS</span></li>
+    </ol>
+  </section>
+
+
+  <!-- ============ MISSION ============ -->
+  <section class="section mission" id="mission" data-rail="04" data-rail-label="MISSION" data-rail-quote="Aligned with Vision 2030.">
+    <div class="slate mono" data-reveal><span>04</span><i>/</i><span>OUR MISSION</span></div>
+
+    <div class="mission__grid">
+      <div>
+        <h2 class="section-title display" data-reveal-words>Democratising the cinematic arts.</h2>
+      </div>
+      <div>
+        <p class="lede beige" data-reveal>
+          Based in Riyadh, Motion Films is deeply committed to supporting Saudi Arabia's rapidly expanding film industry. As the Kingdom's creative sectors reach a global audience like never before, we deliver premium production services in alignment with Vision 2030.
+        </p>
+        <p data-reveal>
+          We believe in breaking down traditional barriers to entry. Recognising that active audience engagement is key to cinema's growth in Saudi Arabia, we are building a talent-development initiative — outstanding audience-submitted scripts will be chosen for development and production.
+        </p>
+        <p data-reveal>
+          This programme is also a hub for on-set mentorship. By giving aspiring Saudi filmmakers hands-on, practical training, we work to build and strengthen the local industry's infrastructure from the ground up.
+        </p>
+        <p class="pull beige display" data-reveal>Crucially, this vision for the future is backed by profound industry expertise.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ LEGACY ============ -->
+  <section class="section legacy" id="legacy" data-rail="05" data-rail-label="LEGACY" data-rail-quote="A trusted production partner across the GCC.">
+    <div class="slate mono" data-reveal><span>05</span><i>/</i><span>25-YEAR LEGACY</span></div>
+
+    <h2 class="section-title display" data-reveal-words>Twenty-five years of trusted partnership.</h2>
+    <p class="lede beige" data-reveal style="max-width:60ch;">
+      Our founding partners have cultivated a formidable client base across the GCC — the trusted production partner for major multinational corporations and key industrial leaders.
+    </p>
+
+    <div class="logowall" id="logowall">
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 01</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 02</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 03</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 04</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 05</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 06</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 07</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 08</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 09</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 10</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 11</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 12</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 13</span></div>
+      <div class="lw" data-lw><span class="mono beige">CLIENT · 14</span></div>
+    </div>
+
+    <p data-reveal class="beige" style="margin-top:clamp(56px,7vw,96px);max-width:52ch;">
+      A legacy of visual storytelling — delivering cinematic scale to major corporate campaigns and award-winning short films.
+    </p>
+
+    <div class="thumbgrid" id="thumbgrid"></div>
+  </section>
+
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact" data-rail="06" data-rail-label="CONTACT" data-rail-quote="Let's make something.">
+    <div class="slate mono" data-reveal><span>06</span><i>/</i><span>CONTACT</span></div>
+
+    <h2 class="contact__title display" data-reveal-lines>
+      <span class="line"><span>Let's make</span></span>
+      <span class="line"><span class="accent">something.</span></span>
+    </h2>
+
+    <div class="contact__grid">
+      <a class="contact__card" href="mailto:info@motionfilms.me" data-reveal>
+        <span class="mono beige">FOR GENERAL INQUIRIES</span>
+        <b class="contact__mail display">info@motionfilms.me</b>
+      </a>
+      <a class="contact__card" href="mailto:quotations@motionfilms.me" data-reveal>
+        <span class="mono beige">START A PROJECT</span>
+        <b class="contact__mail display">quotations@motionfilms.me</b>
+      </a>
+      <a class="contact__card" href="mailto:jobs@motionfilms.me" data-reveal>
+        <span class="mono beige">JOIN OUR TEAM</span>
+        <b class="contact__mail display">jobs@motionfilms.me</b>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer mono">
+  <div class="site-footer__brand"><img src="assets/logo-bbg.png" alt="Motion Films" /></div>
+  <div class="site-footer__cols">
+    <div><span class="k beige">STUDIO</span><span>RIYADH · KINGDOM OF SAUDI ARABIA</span></div>
+    <div><span class="k beige">GENERAL</span><a href="mailto:info@motionfilms.me">info@motionfilms.me</a></div>
+    <div><span class="k beige">PROJECTS</span><a href="mailto:quotations@motionfilms.me">quotations@motionfilms.me</a></div>
+    <div><span class="k beige">CAREERS</span><a href="mailto:jobs@motionfilms.me">jobs@motionfilms.me</a></div>
+    <div class="site-footer__social">
+      <span class="k beige">SOCIAL</span>
+      <a class="social-ig" href="https://instagram.com/motionfilms.me" target="_blank" rel="noopener noreferrer" aria-label="Motion Films on Instagram">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span>@motionfilms.me</span>
+      </a>
+    </div>
+  </div>
+  <div class="site-footer__base">
+    <span>© <span id="year">2026</span> MOTION FILMS</span>
+    <span>IN ALIGNMENT WITH VISION 2030</span>
+    <span>ALL RIGHTS RESERVED</span>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
