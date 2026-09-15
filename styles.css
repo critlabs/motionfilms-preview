@@ -247,12 +247,12 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 
 /* ============ RIYADH LOCATION — Who section ============ */
 .who__location{
-  margin-top:clamp(48px,7vw,96px);
+  margin-top:clamp(24px,3vw,36px);
   position:relative;
   overflow:hidden;
   border:1px solid var(--border);
-  max-width:480px;
   aspect-ratio:2/3;
+  width:100%;
 }
 .who__location img{
   width:100%;
