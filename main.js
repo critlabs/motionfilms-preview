@@ -264,8 +264,6 @@
       { src:'assets/NF7.jpg',             label:'NF · 07' },
       { src:'assets/NF8.jpg',             label:'NF · 08' },
       { src:'assets/NF9.jpg',             label:'NF · 09' },
-      // LOCATION
-      { src:'assets/kingdom-tower.jpg',   label:'RIYADH · KSA' }
     ];
 
     images.forEach(function(img){
