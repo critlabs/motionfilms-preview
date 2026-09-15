@@ -251,17 +251,19 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   position:relative;
   overflow:hidden;
   border:1px solid var(--border);
+  max-width:480px;
+  aspect-ratio:2/3;
 }
 .who__location img{
   width:100%;
-  height:clamp(220px,28vw,420px);
+  height:100%;
   object-fit:cover;
-  object-position:center 40%;
+  object-position:center center;
   display:block;
-  opacity:.72;
+  opacity:.78;
   transition:opacity .5s var(--ease);
 }
-.who__location:hover img{ opacity:.88; }
+.who__location:hover img{ opacity:.92; }
 .who__location__label{
   position:absolute;
   bottom:16px;
