@@ -507,33 +507,38 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 }
 
 @media (max-width:960px){
-  .who__film{ grid-template-columns:1fr; }
-  .who__film-poster img{ width:clamp(120px,40vw,200px); }
   .nav{ display:none; }
   .burger{ display:grid; }
   .who__grid,.mission__grid{ grid-template-columns:1fr; gap:24px; }
+  .almajhool__inner{ grid-template-columns:1fr; }
+  .almajhool__stamp img{ width:clamp(180px,45vw,320px); }
+  .almajhool__stamp::before{ display:none; }
   .contact__grid{ grid-template-columns:1fr; }
   .site-footer__cols{ grid-template-columns:repeat(3,1fr); }
 }
 
 @media (max-width:760px){
-  .laurels img{ width:clamp(60px,20vw,90px); }
   :root{ --rail-w:0px; }
   .rail{ display:none; }
   .site-header{ padding-left:var(--pad); }
   .section{ padding-left:var(--gutter); padding-right:var(--gutter); }
   .hero{ padding-left:var(--gutter); min-height:92svh; }
+  .almajhool{ padding-left:var(--gutter); padding-right:var(--gutter); }
+  .who__location{ aspect-ratio:4/3; }
   .logowall{ grid-template-columns:repeat(3,1fr); }
   .thumbgrid{ grid-template-columns:repeat(3,1fr); gap:8px; }
   .disc__k{ display:none; }
   [data-disc]{ grid-template-columns:auto 1fr; }
   .site-footer{ padding-left:var(--gutter); }
   .site-footer__cols{ grid-template-columns:1fr; }
+  .almajhool__title{ font-size:clamp(28px,8vw,52px); }
+  .almajhool__credit{ grid-template-columns:10ch 1fr; font-size:9px; }
 }
 
 @media (max-width:420px){
   .logowall{ grid-template-columns:repeat(2,1fr); }
   .thumbgrid{ grid-template-columns:repeat(2,1fr); }
+  .almajhool__stamp img{ width:clamp(140px,60vw,220px); }
 }
 
 
