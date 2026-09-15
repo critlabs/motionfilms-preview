@@ -342,6 +342,19 @@
   }
 
 
+  /* ---------- BACK TO TOP ---------- */
+  function initBackTop(){
+    var btn = document.getElementById('backTop'); if (!btn) return;
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > window.innerHeight * 0.4) btn.classList.add('is-visible');
+      else btn.classList.remove('is-visible');
+    }, { passive:true });
+    btn.addEventListener('click', function(){
+      if (lenis) lenis.scrollTo(0, { duration:1.4 });
+      else window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  }
+
   /* ---------- BOOT ---------- */
   function boot(){
     initScroll();
@@ -351,7 +364,8 @@
     initThumbGrid();
     initReveals();
     if (!REDUCED && hasGSAP) gsap.set('#heroCue', { opacity:0 });
-    initLoader(function(){ playHero(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
+    initBackTop();
+  initLoader(function(){ playHero(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
