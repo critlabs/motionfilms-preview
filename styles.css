@@ -300,12 +300,27 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   padding-top:clamp(28px,4vw,48px);
   border-top:1px solid rgba(255,255,255,.1);
 }
+.almajhool__stamp{
+  position:relative;
+}
+.almajhool__stamp::before{
+  content:'';
+  position:absolute;
+  top:16px;
+  left:-10px;
+  bottom:-16px;
+  width:3px;
+  background:var(--red);
+  z-index:3;
+}
 .almajhool__stamp img{
-  width:216px;
+  width:clamp(220px,22vw,380px);
   height:auto;
   display:block;
   border:1px solid var(--border-strong);
-  box-shadow:0 8px 40px rgba(0,0,0,.6);
+  box-shadow:0 16px 60px rgba(0,0,0,.8);
+  position:relative;
+  z-index:2;
 }
 .almajhool__meta{
   display:flex;
@@ -321,11 +336,12 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 }
 .almajhool__title{
   margin:0;
-  font-size:clamp(28px,4.5vw,68px);
+  font-size:clamp(36px,5.5vw,84px);
   color:var(--beige);
   font-weight:900;
   letter-spacing:-.03em;
-  line-height:.95;
+  line-height:.92;
+  text-transform:uppercase;
 }
 .almajhool__sub{
   margin:0;

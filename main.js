@@ -242,7 +242,7 @@
       { src:'assets/almaj00086285.jpg',   label:'AL MAJHOOL · 285' },
       { src:'assets/almaj00086286.jpg',   label:'AL MAJHOOL · 286' },
       { src:'assets/almaj00086288.jpg',   label:'AL MAJHOOL · 288' },
-      { src:'assets/almaj00086289.jpg',   label:'AL MAJHOOL · 289' },
+
       { src:'assets/almaj00086290.jpg',   label:'AL MAJHOOL · 290' },
       { src:'assets/almaj00086295.jpg',   label:'AL MAJHOOL · 295' },
       { src:'assets/almaj00086303.jpg',   label:'AL MAJHOOL · 303' },
