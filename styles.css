@@ -426,9 +426,8 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 .lw span{ position:relative; z-index:1; font-size:9px; letter-spacing:.24em; }
 .lw:hover{ background:var(--bg-3); }
 
-/* Contact-sheet style — compact film proof grid */
 .thumbgrid{
-  display:grid; grid-template-columns:repeat(9, 1fr); gap:4px;
+  display:grid; grid-template-columns:repeat(7, 1fr); gap:clamp(6px,0.8vw,10px);
   margin-top:clamp(36px,5vw,68px);
 }
 .tg{
@@ -504,7 +503,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 /* ============ RESPONSIVE ============ */
 @media (max-width:1200px){
   .logowall{ grid-template-columns:repeat(4,1fr); }
-  .thumbgrid{ grid-template-columns:repeat(6,1fr); }
+  .thumbgrid{ grid-template-columns:repeat(4,1fr); }
 }
 
 @media (max-width:960px){
@@ -527,7 +526,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   .almajhool{ padding-left:var(--gutter); padding-right:var(--gutter); }
   .who__location{ aspect-ratio:4/3; }
   .logowall{ grid-template-columns:repeat(3,1fr); }
-  .thumbgrid{ grid-template-columns:repeat(4,1fr); gap:3px; }
+  .thumbgrid{ grid-template-columns:repeat(3,1fr); gap:6px; }
   .disc__k{ display:none; }
   [data-disc]{ grid-template-columns:auto 1fr; }
   .site-footer{ padding-left:var(--gutter); }
@@ -538,7 +537,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 
 @media (max-width:420px){
   .logowall{ grid-template-columns:repeat(2,1fr); }
-  .thumbgrid{ grid-template-columns:repeat(3,1fr); }
+  .thumbgrid{ grid-template-columns:repeat(2,1fr); }
   .almajhool__stamp img{ width:clamp(140px,60vw,220px); }
 }
 

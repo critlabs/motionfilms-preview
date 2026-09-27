@@ -226,47 +226,32 @@
   function initThumbGrid(){
     var grid = $('#thumbgrid'); if (!grid) return;
 
+    // 7×3 grid (21 images) as per client spec — best selection across all projects
     var images = [
-      // AL MAJHOOL — scene/shot stills (scene order)
+      // AL MAJHOOL — scene stills (scene order)
       { src:'assets/almaj-s2s2.jpg',      label:'AL MAJHOOL · S02' },
       { src:'assets/almaj-s4s7.jpg',      label:'AL MAJHOOL · S04' },
       { src:'assets/almaj-s5s2.jpg',      label:'AL MAJHOOL · S05' },
       { src:'assets/almaj-s5s5.jpg',      label:'AL MAJHOOL · S05' },
-      // AL MAJHOOL — sequential production stills (frame order)
+      // AL MAJHOOL — production stills
       { src:'assets/almaj00086248.jpg',   label:'AL MAJHOOL · 248' },
-      { src:'assets/almaj00086249.jpg',   label:'AL MAJHOOL · 249' },
-      { src:'assets/almaj00086250.jpg',   label:'AL MAJHOOL · 250' },
-      { src:'assets/almaj00086252.jpg',   label:'AL MAJHOOL · 252' },
       { src:'assets/almaj00086275.jpg',   label:'AL MAJHOOL · 275' },
-      { src:'assets/almaj00086277.jpg',   label:'AL MAJHOOL · 277' },
-      { src:'assets/almaj00086278.jpg',   label:'AL MAJHOOL · 278' },
       { src:'assets/almaj00086281.jpg',   label:'AL MAJHOOL · 281' },
-      { src:'assets/almaj00086282.jpg',   label:'AL MAJHOOL · 282' },
-      { src:'assets/almaj00086284.jpg',   label:'AL MAJHOOL · 284' },
-      { src:'assets/almaj00086285.jpg',   label:'AL MAJHOOL · 285' },
-      { src:'assets/almaj00086286.jpg',   label:'AL MAJHOOL · 286' },
-      { src:'assets/almaj00086288.jpg',   label:'AL MAJHOOL · 288' },
-
-      { src:'assets/almaj00086290.jpg',   label:'AL MAJHOOL · 290' },
       { src:'assets/almaj00086295.jpg',   label:'AL MAJHOOL · 295' },
-      { src:'assets/almaj00086303.jpg',   label:'AL MAJHOOL · 303' },
       { src:'assets/almaj00086305.jpg',   label:'AL MAJHOOL · 305' },
-      { src:'assets/almaj00086314.jpg',   label:'AL MAJHOOL · 314' },
       { src:'assets/almaj00086324.jpg',   label:'AL MAJHOOL · 324' },
       { src:'assets/almaj00086344.jpg',   label:'AL MAJHOOL · 344' },
-      { src:'assets/almaj00086348.jpg',   label:'AL MAJHOOL · 348' },
-      // INTERIOR — corporate/brand shoots (sequence order)
+      // INTERIOR — corporate/brand shoots
       { src:'assets/Int.jpg',             label:'INT · 00' },
       { src:'assets/Int1.jpg',            label:'INT · 01' },
       { src:'assets/Int2.jpg',            label:'INT · 02' },
       { src:'assets/Int3.jpg',            label:'INT · 03' },
       { src:'assets/Int4.jpg',            label:'INT · 04' },
       { src:'assets/Int5.jpg',            label:'INT · 05' },
-      // NF PROJECT — selected shots (shot order)
+      // NF PROJECT
       { src:'assets/NF1.jpg',             label:'NF · 01' },
       { src:'assets/NF2.jpg',             label:'NF · 02' },
       { src:'assets/NF7.jpg',             label:'NF · 07' },
-      { src:'assets/NF8.jpg',             label:'NF · 08' },
       { src:'assets/NF9.jpg',             label:'NF · 09' },
     ];
 
