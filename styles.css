@@ -518,6 +518,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 }
 
 @media (max-width:760px){
+  .contact__card{ min-height:auto; gap:10px; }
   :root{ --rail-w:0px; }
   .rail{ display:none; }
   .site-header{ padding-left:var(--pad); }
