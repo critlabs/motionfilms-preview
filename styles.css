@@ -4,19 +4,20 @@
 */
 
 :root{
-  --bg:#0A0A0A;
-  --bg-2:#141414;
-  --bg-3:#1C1C1C;
-  --red:#D42027;
-  --red-dim:#8A1015;
-  --indigo:#8A8A8A;
-  --indigo-dim:#555555;
-  --beige:#FFFFFF;
-  --beige-dim:#AAAAAA;
-  --border:#242424;
-  --border-strong:#383838;
+  --bg:#101017;
+  --bg-2:#161623;
+  --bg-3:#1c1c2c;
+  --red:#D30805;
+  --red-dim:#8a0503;
+  --indigo:#C5C2D8;
+  --indigo-dim:#8a879a;
+  --beige:#E8E3CC;
+  --beige-dim:#a09b83;
+  --border:#232338;
+  --border-strong:#33334a;
 
-  --font-display:'Archivo','Helvetica Neue',system-ui,sans-serif;
+  --font-display:'Archivo Black','Archivo','Helvetica Neue',system-ui,sans-serif;
+  --font-body:'Archivo Narrow','Archivo',sans-serif;
   --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
 
   --ease:cubic-bezier(.16,1,.3,1);
@@ -34,7 +35,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--indigo);
-  font-family:var(--font-display);
+  font-family:var(--font-body);
   font-weight:400;
   font-size:clamp(15px,1.05vw,17px);
   line-height:1.65;
