@@ -118,7 +118,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   padding:var(--pad);
   padding-left:calc(var(--rail-w) + var(--pad));
 }
-.brand img{ width:clamp(88px,8vw,120px); }
+.brand img{ width:clamp(88px,8vw,120px); mix-blend-mode:screen; }
 .nav{ display:flex; gap:clamp(18px,2.4vw,32px); font-size:11px; color:var(--indigo); }
 .nav a{ position:relative; padding-bottom:4px; transition:color .3s; }
 .nav a::after{ content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--red); transform:scaleX(0); transform-origin:right; transition:transform .45s var(--ease); }
