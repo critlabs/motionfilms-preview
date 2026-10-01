@@ -410,12 +410,12 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 /* ============ LEGACY ============ */
 .legacy .section-title{ margin-bottom:clamp(24px,3vw,32px); }
 .logowall{
-  display:grid; grid-template-columns:repeat(7, 1fr); gap:1px;
+  display:grid; grid-template-columns:repeat(5, 1fr); gap:1px;
   border:1px solid var(--border); background:var(--border);
   margin-top:clamp(28px,4vw,48px);
 }
 .lw{
-  aspect-ratio:16/9; background:var(--bg-2);
+  aspect-ratio:1/1; background:var(--bg-2);
   display:grid; place-items:center;
   transition:background-color .4s var(--ease);
   position:relative; overflow:hidden;
@@ -503,7 +503,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width:1200px){
-  .logowall{ grid-template-columns:repeat(4,1fr); }
+  .logowall{ grid-template-columns:repeat(3,1fr); }
   .thumbgrid{ grid-template-columns:repeat(4,1fr); }
 }
 
@@ -527,7 +527,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   .hero{ padding-left:var(--gutter); min-height:92svh; }
   .almajhool{ padding-left:var(--gutter); padding-right:var(--gutter); }
   .who__location{ aspect-ratio:4/3; }
-  .logowall{ grid-template-columns:repeat(3,1fr); }
+  .logowall{ grid-template-columns:repeat(3,1fr); gap:1px; }
   .thumbgrid{ grid-template-columns:repeat(3,1fr); gap:6px; }
   .disc__k{ display:none; }
   [data-disc]{ grid-template-columns:auto 1fr; }
@@ -538,25 +538,22 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 }
 
 @media (max-width:420px){
-  .logowall{ grid-template-columns:repeat(2,1fr); }
+  .logowall{ grid-template-columns:repeat(2,1fr); gap:1px; }
   .thumbgrid{ grid-template-columns:repeat(2,1fr); }
   .almajhool__stamp img{ width:clamp(140px,60vw,220px); }
 }
 
 
 /* ============ AWARD LAURELS IN LOGOWALL ============ */
-.lw--award{
-  padding:clamp(8px,1.5vw,20px);
-}
+.lw--award{ padding:clamp(12px,2vw,28px); }
 .lw--award img{
-  width:100%;
-  height:100%;
+  width:100%; height:100%;
   object-fit:contain;
   filter:invert(1);
-  opacity:.75;
-  transition:opacity .35s var(--ease);
+  opacity:.7;
+  transition:opacity .35s var(--ease), transform .45s var(--ease);
 }
-.lw--award:hover img{ opacity:1; }
+.lw--award:hover img{ opacity:1; transform:scale(1.04); }
 
 /* ============ BACK TO TOP ============ */
 .back-top{
