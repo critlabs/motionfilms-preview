@@ -540,6 +540,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 
 @media (max-width:420px){
   .logowall{ grid-template-columns:repeat(2,1fr); gap:1px; }
+  .lw--award:last-child:nth-child(odd){ grid-column:1 / -1; max-width:50%; margin:0 auto; }
   .thumbgrid{ grid-template-columns:repeat(2,1fr); }
   .almajhool__stamp img{ width:clamp(140px,60vw,220px); }
 }
