@@ -580,10 +580,10 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 
 /* ============ LOADER LOGO FLIP ============ */
 @keyframes logoFlip{
-  0%   { transform:scaleX(1); }
-  40%  { transform:scaleX(-1); }
-  60%  { transform:scaleX(-1); }
-  100% { transform:scaleX(1); }
+  0%   { transform:scaleY(1); }
+  40%  { transform:scaleY(-1); }
+  60%  { transform:scaleY(-1); }
+  100% { transform:scaleY(1); }
 }
 .loader__mark img{ animation:logoFlip 1.6s var(--ease) 0.1s forwards; backface-visibility:visible; }
 /* Scale the multicultural laurel so wreath fills the cell (image has extra whitespace) */
