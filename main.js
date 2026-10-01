@@ -7,11 +7,21 @@
 
   // Force scroll to top on every page load/refresh (browser default restores position)
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  window.scrollTo(0, 0);
-  // Covers: initial paint, full load, bfcache restores (iOS/Safari), and visibility changes
-  window.addEventListener('load',       function(){ window.scrollTo(0, 0); });
-  window.addEventListener('pageshow',   function(){ window.scrollTo(0, 0); });
-  window.addEventListener('beforeunload',function(){ window.scrollTo(0, 0); });
+  function forceTop(){
+    try { window.scrollTo(0, 0); } catch(e){}
+    try { document.documentElement.scrollTop = 0; document.body.scrollTop = 0; } catch(e){}
+    if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+  }
+  forceTop();
+  // iOS Safari / mobile Chrome restore scroll aggressively — hammer it for 1.2s via RAF
+  var topStart = Date.now();
+  (function keepTop(){
+    forceTop();
+    if (Date.now() - topStart < 1200) requestAnimationFrame(keepTop);
+  })();
+  window.addEventListener('load',       forceTop);
+  window.addEventListener('pageshow',   forceTop);
+  window.addEventListener('beforeunload',forceTop);
 
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGSAP = typeof window.gsap !== 'undefined';
