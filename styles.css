@@ -410,10 +410,10 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
 /* ============ LEGACY ============ */
 .legacy .section-title{ margin-bottom:clamp(24px,3vw,32px); }
 .logowall{
-  display:grid; grid-template-columns:repeat(5, 1fr); gap:1px;
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
   border:1px solid var(--border); background:var(--border);
   margin-top:clamp(28px,4vw,48px);
-  max-width:860px;
+  max-width:720px;
 }
 .lw{
   aspect-ratio:4/3; background:var(--bg-2);
@@ -586,9 +586,7 @@ em{ color:var(--beige); font-style:normal; letter-spacing:.01em; }
   100% { transform:scaleY(1); }
 }
 .loader__mark img{ animation:logoFlip 1.6s var(--ease) 0.1s forwards; backface-visibility:visible; }
-/* Scale the multicultural laurel so wreath fills the cell (image has extra whitespace) */
-.lw--award:nth-child(2) img{ transform:scale(1.22); }
-.lw--award:nth-child(2):hover img{ transform:scale(1.26); }
+
 
 /* ============ REDUCED MOTION ============ */
 @media (prefers-reduced-motion:reduce){
