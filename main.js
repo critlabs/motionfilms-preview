@@ -5,9 +5,13 @@
 (function(){
   'use strict';
 
-  // Force scroll to top on every page load — browser default restores position
+  // Force scroll to top on every page load/refresh (browser default restores position)
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.scrollTo(0, 0);
+  // Covers: initial paint, full load, bfcache restores (iOS/Safari), and visibility changes
+  window.addEventListener('load',       function(){ window.scrollTo(0, 0); });
+  window.addEventListener('pageshow',   function(){ window.scrollTo(0, 0); });
+  window.addEventListener('beforeunload',function(){ window.scrollTo(0, 0); });
 
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGSAP = typeof window.gsap !== 'undefined';
@@ -26,7 +30,10 @@
   function initScroll(){
     if (REDUCED || typeof window.Lenis === 'undefined') return;
     lenis = new Lenis({ duration:1.15, lerp:.085, smoothWheel:true, wheelMultiplier:1, touchMultiplier:1.6 });
-    lenis.scrollTo(0, { immediate:true }); // force top after lenis init
+    lenis.scrollTo(0, { immediate:true, force:true }); // force top after lenis init
+    // Belt-and-braces: force top again after loader completes and ScrollTriggers refresh
+    setTimeout(function(){ lenis.scrollTo(0, { immediate:true, force:true }); window.scrollTo(0,0); }, 50);
+    setTimeout(function(){ lenis.scrollTo(0, { immediate:true, force:true }); window.scrollTo(0,0); }, 500);
     lenis.on('scroll', function(){ if (window.ScrollTrigger) ScrollTrigger.update(); });
     if (hasGSAP){
       gsap.ticker.add(function(t){ lenis.raf(t*1000); });
