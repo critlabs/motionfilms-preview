@@ -26,6 +26,7 @@
   function initScroll(){
     if (REDUCED || typeof window.Lenis === 'undefined') return;
     lenis = new Lenis({ duration:1.15, lerp:.085, smoothWheel:true, wheelMultiplier:1, touchMultiplier:1.6 });
+    lenis.scrollTo(0, { immediate:true }); // force top after lenis init
     lenis.on('scroll', function(){ if (window.ScrollTrigger) ScrollTrigger.update(); });
     if (hasGSAP){
       gsap.ticker.add(function(t){ lenis.raf(t*1000); });
