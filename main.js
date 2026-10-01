@@ -27,8 +27,15 @@
 
 
   /* ---------- SMOOTH SCROLL ---------- */
+  var IS_TOUCH = (window.matchMedia('(hover:none) and (pointer:coarse)').matches) || ('ontouchstart' in window && window.innerWidth < 1024);
   function initScroll(){
     if (REDUCED || typeof window.Lenis === 'undefined') return;
+    // Touch devices: skip Lenis, use native scroll — ScrollTrigger updates automatically.
+    // Still refresh ScrollTrigger on scroll to ensure reveals fire during fast flicks.
+    if (IS_TOUCH){
+      window.addEventListener('scroll', function(){ if (window.ScrollTrigger) ScrollTrigger.update(); }, { passive:true });
+      return;
+    }
     lenis = new Lenis({ duration:1.15, lerp:.085, smoothWheel:true, wheelMultiplier:1, touchMultiplier:1.6 });
     lenis.scrollTo(0, { immediate:true, force:true }); // force top after lenis init
     // Belt-and-braces: force top again after loader completes and ScrollTriggers refresh
