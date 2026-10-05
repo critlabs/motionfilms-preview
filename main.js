@@ -58,14 +58,50 @@
     } else {
       requestAnimationFrame(function raf(t){ lenis.raf(t); requestAnimationFrame(raf); });
     }
+  }
+
+  /* ---------- ANCHOR NAV (works with or without Lenis) ---------- */
+  function initAnchorNav(){
     $$('a[href^="#"]').forEach(function(a){
       a.addEventListener('click', function(e){
         var id = a.getAttribute('href'); if (!id || id === '#') return;
         var t = document.querySelector(id); if (!t) return;
-        e.preventDefault(); closeMenu();
-        lenis.scrollTo(t, { offset:0, duration:1.4 });
+        e.preventDefault();
+        closeMenu();
+        if (lenis && lenis.scrollTo){
+          lenis.scrollTo(t, { offset:0, duration:1.4 });
+        } else {
+          setTimeout(function(){
+            var y = t.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({ top:y, behavior:'smooth' });
+          }, 180);
+        }
       });
     });
+  }
+
+  /* ---------- VIDEO AUTOPLAY FALLBACK ---------- */
+  function initVideoAutoplay(){
+    var v = $('.hero__video'); if (!v) return;
+    v.muted = true; v.setAttribute('muted','');
+    v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline','');
+    var tryPlay = function(){
+      try {
+        var p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(function(){
+          var retry = function(){
+            v.play().catch(function(){});
+            document.removeEventListener('touchstart', retry);
+            document.removeEventListener('click', retry);
+            document.removeEventListener('scroll', retry);
+          };
+          document.addEventListener('touchstart', retry, { passive:true, once:true });
+          document.addEventListener('click', retry, { once:true });
+          document.addEventListener('scroll', retry, { passive:true, once:true });
+        });
+      } catch(e){}
+    };
+    if (v.readyState >= 2) tryPlay(); else v.addEventListener('loadeddata', tryPlay, { once:true });
   }
 
 
@@ -373,9 +409,10 @@
     initHeader();
     initThumbGrid();
     initReveals();
+    initAnchorNav();
     if (!REDUCED && hasGSAP) gsap.set('#heroCue', { opacity:0 });
     initBackTop();
-  initVideoAutoplay();
+    initVideoAutoplay();
   initLoader(function(){ playHero(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
   }
 
