@@ -375,6 +375,7 @@
     initReveals();
     if (!REDUCED && hasGSAP) gsap.set('#heroCue', { opacity:0 });
     initBackTop();
+  initVideoAutoplay();
   initLoader(function(){ playHero(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
   }
 
